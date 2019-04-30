@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forest Growth Models</title>
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/modelItemGroup.css" rel="stylesheet">
+    <link href="css/Application.css" rel="stylesheet">
+</head>
+
+<body class="scrollbar">
+<!--start 导航条-->
+<div class="head navbar-static-top">
+    <nav class="navbar navbar-default pcnav" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <button id="phoneBtn" type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="javascript:void(0)mycollapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="http://222.192.7.75:8080/FGM-theme/" class="navbar-brand">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--end 导航条-->
+<div class="clearfix"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="logoPanel">
+                        <img style="width: 100%" src="images/model/forest.jpg"/>
+                        <h3 style="text-align: center">Forest Growth Models</h3>
+                    </div>
+                    <div class="navbarPanel">
+                        <ul class="navigation">
+                            <li>
+                                <a href="javascript:void(0)" index=0>
+                                    <i class="fa fa-info-circle fa-fw"></i>
+                                    <span>Theme info</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" index=1>
+                                    <i class="fa fa-th-large fa-fw"></i>
+                                    <span>Models</span>
+                                    <!--<i class="fa fa-chevron-right pull-right arrow"></i>-->
+                                </a>
+                                <ul class="subNavbar">
+                                    <li>
+                                        <a href="javascript:void(0)" index=1>DBH Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=2>Height Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=3>UBH Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=4>CH Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=5>CW Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=6>Biomass Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=7>Volume Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=8>Mortality Models</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=9>Other Forest Models</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" index=10>
+                                    <i class="fa fa-database fa-fw"></i>
+                                    <span>Data</span>
+                                </a>
+                                <ul class="subNavbar">
+                                    <li>
+                                        <a href="javascript:void(0)" index=10>Forest Data</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index=11>DEM Data</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" index="12" onclick="SetAppTable('DBH_Model')">
+                                    <i class="fa fa-cubes fa-fw"></i>
+                                    <span>Applications</span>
+                                    <!--<i class="fa fa-chevron-right pull-right arrow"></i>-->
+                                </a>
+                                <ul class="subNavbar">
+                                    <li>
+                                        <a href="javascript:void(0)" index="12" onclick="SetAppTable('DBH_Model')">Applications of DBH </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="13" onclick="SetAppTable('Height_Model')">Applications of Height </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="14" onclick="SetAppTable('UBH_Model')">Applications of UBH </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="15" onclick="SetAppTable('CH_Model')">Applications of CH </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="16" onclick="SetAppTable('CW_Model')">Applications of CW </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="17" onclick="SetAppTable('Biomass_Model')">Applications of Biomass </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="18" onclick="SetAppTable('Volume_Model')"> Applications of Volume</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="19" onclick="SetAppTable('Mortality_Model')"> Applications of Mortality</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="20" onclick="SetAppTable('Other_Model')">Applications of Other</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" index="21">Application of Integration</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="infoPanel container-fluid" id="BasicInfoPanel">
+                        <div class="title text-center">
+                            <h3>
+                                <span>Theme Info</span>
+                            </h3>
+                        </div>
+                        <div class="info">
+                            <h4>Basic Information</h4>
+                            <p>These models can predict the growth, mortality of individual trees in forest stand.</p>
+                            <p>There are some models which can predict the individual-tree growth with forest management
+                                considered, including diameter at breast height (DBH), tree height, under branches
+                                height (UBH), crown width (CW), crown height (CH), biomass, volume and mortality. Besides, the
+                                stand2tree model which can convert the polygon data of stands or forests into point data of trees
+                                is also provided.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/tree.jpg"
+                                    width="248px"></p>
+
+                            <h4>The models are listed as follow：</h4>
+                            <ul>
+                                <li>Individual-tree models
+                                    <ul>
+                                        <li>DBH Models</li>
+                                        <li>Height Models</li>
+                                        <li>UBH Models</li>
+                                        <li>CH Models</li>
+                                        <li>CW Models</li>
+                                        <li>Biomass Models</li>
+                                        <li>Volume Models</li>
+                                        <li>Mortality Models</li>
+                                    </ul>
+                                </li>
+                                <li>Other models
+                                    <ul>
+                                        <li>Decision making models for felling trees</li>
+                                        <li>Individual-tree information estimation models</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h4>Growth prediction of trees DBH</h4>
+                            <p>Based on the data, including tree locations, initial DBHs, age, DEM and so on, these
+                                models
+                                can be used to predict the growth of DBH from initial age to end age.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/dbh.jpg"></p>
+
+                            <h4>Growth prediction of trees height</h4>
+                            <p>There are several different models which can be selected to calculate the growth of tree
+                                height by using the DBH data.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/height.jpg"></p>
+
+                            <h4>Growth prediction of trees UBH</h4>
+                            <p>There are different models which can be selected to calculate the growth of tree under
+                                branches height.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/ubh.jpg"></p>
+
+                            <h4>Growth prediction of trees crown height</h4>
+                            <p>These crown height models are used to calculate the crown height growth.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/ch.jpg"></p>
+
+                            <h4>Growth prediction of trees crown width</h4>
+                            <p>There are different models which can be selected to calculate the growth of tree crown
+                                width.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/cw.jpg"></p>
+
+                            <h4>Growth prediction of trees biomass</h4>
+                            <p>These models can be selected to calculate the biomass of individual trees.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/biomass.jpg"></p>
+
+                            <h4>Growth prediction of trees volume</h4>
+                            <p>These models can be selected to calculate the volume of individual trees.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/volume.jpg"></p>
+
+                            <h4>Growth prediction of trees mortality</h4>
+                            <p>There are different mortality models which can be selected to calculate the survival
+                                probability
+                                of individual trees.</p>
+                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="./images/mortality.jpg"></p>
+                        </div>
+                    </div>
+
+                    <div class="infoPanel container-fluid modelPanel" id="dbhPanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="heightPanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="ubhPanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="chPanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="cwPanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="biomassPanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="volumePanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="mortalityPanel">
+                    </div>
+                    <div class="infoPanel container-fluid modelPanel" id="otherModelPanel">
+                    </div>
+
+
+					
+                    <div class="infoPanel container-fluid dataPanel" id="forestData">
+                                <div class="title text-center">
+                                    <h3>
+                                        <span>ShpData</span>
+                                    </h3>
+                                </div>
+
+                                    <div class="info clearfix">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="modelThumbnailTitle"><p></p></div>
+                                            <div class="modelThumbnail">
+                                                <ul class="modelNav clearfix">
+                                                    <li class="pull-left">forest_point_data.zip</li>
+                                                </ul>
+                                                <div class="picPanel"><img src="images/data/shp/forestdata1.jpg"></div>
+                                                <div><h1 style="font-size: small">Sample data: Huangfengqiao State-owned Forest Farm, Youxian County, Hunan Province The area of the Heshangling plot is 40mX80m, and the forest age is 10 years.
+                                                </h1></div>
+                                                <ul class="modelNav clearfix">
+                                                    <li class="pull-right model_name">
+                                                        <a href="data/shp/forestdata1.zip">
+                                                            <button class="btn btn-success">download</button>
+                                                        </a>
+                                                    </li>
+                                                    <!--<li class="pull-left">test1.zip</li>-->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="modelThumbnailTitle"><p></p></div>
+                                            <div class="modelThumbnail">
+                                                <ul class="modelNav clearfix">
+                                                    <li class="pull-left">forest polygon data.zip</li>
+                                                </ul>
+                                                <div class="picPanel"><img src="images/data/shp/forestdata2.jpg"></div>
+                                                <div><h1 style="font-size: small">Sample data: Huangfengqiao State-owned Forest Farm, Jixian County, Hunan Province Dongfeng Work Area</h1></div>
+                                                <ul class="modelNav clearfix">
+                                                    <li class="pull-right model_name">
+                                                        <a href="data/shp/forestdata2.zip">
+                                                            <button class="btn btn-success">download</button>
+                                                        </a>
+                                                    </li>
+                                                    <!--<li class="pull-left">test2.zip</li>-->
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    
+					<div class="infoPanel container-fluid dataPanel" id="demData">
+                                <div class="title text-center">
+                                    <h3>
+                                        <span>DEMData</span>
+                                    </h3>
+                                </div>
+                                <div class="info clearfix">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="modelThumbnailTitle"><p></p></div>
+                                            <div class="modelThumbnail">
+                                                <ul class="modelNav clearfix">
+                                                    <li class="pull-left">forest dem data.zip</li>
+                                                </ul>
+                                                <div class="picPanel"><img src="images/data/dem/forestdatadem1.jpg"></div>
+                                                <div><h1 style="font-size: small">Sample data: Huangfengqiao State-owned Forest Farm, Jixian County, Hunan Province The area of the Heshangling plot is 40mX80m, and the forest age is 10 years.</h1></div>
+                                                <ul class="modelNav clearfix">
+                                                    <li class="pull-right model_name">
+                                                        <a href="data/dem/forestdatadem1.zip">
+                                                            <button class="btn btn-success">download</button>
+                                                        </a>
+                                                    </li>
+                                                    <!--<li class="pull-left">test1.zip</li>-->
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="modelThumbnailTitle"><p></p></div>
+                                            <div class="modelThumbnail">
+                                                <ul class="modelNav clearfix">
+                                                    <li class="pull-left">DEM data download</li>
+                                                </ul>
+                                                <div class="picPanel"><img src="images/data/dem/geospatialdatacloud.jpg"></div>
+
+                                                <a href="http://www.gscloud.cn/sources/?cdataid=302&pdataid=10" style="font-weight: bold;text-align:center">DEM source: Geospatial Data Cloud</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+							</div>
+							
+
+                    <div class="infoPanel container-fluid applicationPanel" id="dbhApplication">
+                        <div class="title text-center">
+                            <h3><span>DBH Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="DBHAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="heightApplication">
+                        <div class="title text-center">
+                            <h3><span>Height Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="HeightAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="ubhApplication">
+                        <div class="title text-center">
+                            <h3><span>UBH Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="UBHAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="chApplication">
+                        <div class="title text-center">
+                            <h3><span>CH Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="CHAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="cwApplication">
+                        <div class="title text-center">
+                            <h3><span>CW Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="CWAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="biomassApplication">
+                        <div class="title text-center">
+                            <h3><span>Biomass Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="BiomassAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="volumeApplication">
+                        <div class="title text-center">
+                            <h3><span>Volume Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="VolumeAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="mortalityApplication">
+                        <div class="title text-center">
+                            <h3><span>Mortality Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="MortalityAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="otherApplication">
+                        <div class="title text-center">
+                            <h3><span>Other Model Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="OtherAppList">
+                        </div>
+                    </div>
+                    <div class="infoPanel container-fluid applicationPanel" id="Integration">
+                        <div class="title text-center">
+                            <h3><span>Integration Application</span></h3>
+                        </div>
+                        <div class="info clearfix" id="IntegrationApp">
+                            <a href="integrateApp.html" target="_blank">
+                                <img src="images/integration.png" style="width:500px; margin-top: 20px; text-align: center; position: center">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery/jquery-1.9.1.js"></script>
+<script src="js/modelItemGroup.js"></script>
+<script src="js/showModels.js"></script>
+<script src="js/showApplications.js"></script>
+<script src="js/createParams.js"></script>
+</html>

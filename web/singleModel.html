@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/fileinput.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+
+<style>
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    #data{
+        height: 100%;
+        padding: 20px;
+        background-color: white;
+    }
+    #params{
+        height: 100%;
+        background-color: whitesmoke;
+    }
+    #model-param{
+        /*height: 50%;*/
+        padding: 20px;
+    }
+    #stand-param{
+        /*height: 50%;*/
+        padding: 20px;
+    }
+    #modelresult{
+        /*height: 50%;*/
+        padding: 20px;
+    }
+    #modelImg{
+        /*align-content: center;*/
+    }
+    #modeldata{
+        padding-top: 20px;
+        width: 100%;
+        /*height: 100%;*/
+    }
+</style>
+<body>
+<div class="col-md-6" id="data">
+    <div style="background-color: white; width: 100%; border: 10px solid whitesmoke; padding: 10px;" id="imgBorder">
+        <img src="" id="modelImg">
+    </div>
+    <div id="modeldata"></div>
+</div>
+
+<div class="col-md-6" id="params">
+    <div id="stand-param">
+
+    </div>
+    <div id="model-param">
+
+    </div>
+    <div id="modelresult">
+
+    </div>
+</div>
+</body>
+<script src="js/jquery/jquery-1.9.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fileinput.min.js"></script>
+<script src="js/runModel.js"></script>
+<script src="js/createParams2.js"></script>
+<script>
+    $("#params").height(window.innerHeight + 'px');
+    $("#data").height(window.innerHeight + 'px');
+
+    $(window).resize(function () {
+        $("#params").height(window.innerHeight + 'px');
+        $("#data").height(window.innerHeight + 'px');
+    });
+</script>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/visualization.css" rel="stylesheet">
+    <link href="css/fileinput.min.css" rel="stylesheet">
+    <link href="css/bootstrap-select.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="col-md-2 sidebar">
+    <ul class=" nav nav-pills nav-stacked" style="margin-top: 10px">
+        <li class="active" id="visualTab1"><a href="#">Classes distribution</a></li>
+        <li id="visualTab2"><a href="#">Growth tendency</a></li>
+        <li id="visualTab3"><a href="#">Scatter plot</a></li>
+        <li id="visualTab4"><a href="#">3D forest</a></li>
+    </ul>
+</div>
+<div class="col-md-10 visualization" id="visual1">
+    <div class="col-md-8 scene">
+        <div id="histo-main"></div>
+    </div>
+    <div class="col-md-4 data">
+        <div id="histo-data">
+            <div>
+                <label class="Uinfo" style="margin-bottom: 10px; margin-right: 10px">Data Type:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectData1">
+                    <option value="0">UDX data</option>
+                    <option value="1">CSV data</option>
+                    <option value="2">ESRI Shapefile data</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <label class="Uinfo"  style="height: 40px; float: left; margin-right: 20px">Upload Data:</label>
+                <input id="upload_file" type="file" class="model file" data-show-preview="false"
+                       data-show-upload="false">
+            </div>
+            <div>
+                <label class="Uinfo" style="height: 40px; float: left; padding-top: 10px;margin-right: 20px">Select variable for
+                    visualization:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectVariable">
+                    <option value="0">Diameter</option>
+                    <option value="1">Height</option>
+                    <option value="2">Crown width</option>
+                </select>
+            </div>
+            <div style="text-align:center">
+                <button class="btn btn-primary" style="margin-top: 100px" onclick="classesVisual()">Visualization
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-10 visualization" id="visual2">
+    <div class="col-md-8 scene">
+        <div id="line-main"></div>
+    </div>
+    <div class="col-md-4 data">
+        <div id="line-data">
+            <div>
+                <label class="Uinfo" style="margin-bottom: 10px; margin-right: 10px">Data Type:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectData2">
+                    <option value="0">UDX data</option>
+                    <option value="1">CSV data</option>
+                    <option value="2">ESRI Shapefile data</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <label class="Uinfo" style="margin-bottom: 10px">Upload Data at different ages:</label>
+                <input id="upload_file2" type="file" class="model file" data-show-preview="false"
+                       data-show-upload="false" multiple="multiple">
+            </div>
+            <div>
+                <label style="height: 40px; float: left; padding-top: 10px;margin-right: 20px">Select variable for
+                    visualization:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectVariable-line">
+                    <option value="0">Diameter</option>
+                    <option value="1">Height</option>
+                    <option value="2">Crown width</option>
+                    <option value="3">Crown height</option>
+                    <option value="4">Under branch height</option>
+                    <option value="5">Volume</option>
+                    <option value="6">Biomass</option>
+                    <option value="7">Tree Number</option>
+                </select>
+            </div>
+            <div style="text-align:center">
+                <button class="btn btn-primary" style="margin-top: 100px" onclick="lineVisual()">Visualization
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-10 visualization" id="visual3">
+    <div class="col-md-8 scene">
+        <div id="point-main"></div>
+    </div>
+    <div class="col-md-4 data">
+        <div id="point-data">
+            <div>
+                <label class="Uinfo" style="margin-bottom: 10px; margin-right: 10px">Data Type:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectData3">
+                    <option value="0">UDX data</option>
+                    <option value="1">CSV data</option>
+                    <option value="2">ESRI Shapefile data</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <label class="Uinfo" style="margin-bottom: 10px">Upload Data (only 2 files):</label>
+                <input id="upload_file3" type="file" class="model file" data-show-preview="false"
+                       data-show-upload="false" multiple="multiple">
+            </div>
+            <div>
+                <label style="height: 40px; float: left; padding-top: 10px;margin-right: 20px">Select X-Axis:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectXAxis">
+                    <option value="0">Diameter-A</option>
+                    <option value="1">Height-A</option>
+                    <option value="2">Crown width-A</option>
+                    <option value="3">Diameter-B</option>
+                    <option value="4">Height-B</option>
+                    <option value="5">Crown width-B</option>
+                </select>
+            </div>
+            <div>
+                <label style="height: 40px; float: left; padding-top: 10px;margin-right: 20px">Select Y-Axis:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectYAxis">
+                    <option value="0">Diameter-A</option>
+                    <option value="1">Height-A</option>
+                    <option value="2">Crown width-A</option>
+                    <option value="3">Diameter-B</option>
+                    <option value="4">Height-B</option>
+                    <option value="5">Crown width-B</option>
+                </select>
+            </div>
+            <div style="text-align:center">
+                <button class="btn btn-primary" style="margin-top: 100px" onclick="pointVisual()">Visualization
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-10 visualization" id="visual4">
+    <div class="col-md-8 scene">
+        <div id="canvas"></div>
+    </div>
+    <div class="col-md-4 data">
+        <div id="data4">
+            <div>
+                <label class="Uinfo" style="margin-bottom: 10px; margin-right: 10px">Data Type:</label>
+                <select class="selectpicker" data-style="btn-info" id="selectData4">
+                    <option value="0">UDX data</option>
+                    <option value="1">CSV data</option>
+                    <option value="2">ESRI Shapefile data</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <label class="Uinfo" style="margin-bottom: 10px">Upload Data:</label>
+                <input id="upload_file4" type="file" class="model file" data-show-preview="false"
+                       data-show-upload="false">
+            </div>
+            <div style="text-align:center">
+                <button class="btn btn-primary" style="margin-top: 100px" onclick="render3Dforest()">Visualization
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.xml2json.js"></script>
+<script src='js/bootstrap.min.js'></script>
+<script src="js/fileinput.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script>
+    $(".sidebar").height(window.innerHeight + 'px');
+    $(".visualization").height(window.innerHeight + 'px');
+
+    $(window).resize(function () {
+        $(".sidebar").height(window.innerHeight + 'px');
+        $(".visualization").height(window.innerHeight + 'px');
+    });
+
+    $(document).ready(function () {
+        $("#visual1").show();
+        $("#visual2").hide();
+        $("#visual3").hide();
+        $("#visual4").hide();
+
+        $("#visualTab1").click(function () {
+            $("#visual1").show();
+            $("#visual2").hide();
+            $("#visual3").hide();
+            $("#visual4").hide();
+
+            $("#visualTab1,#visualTab2,#visualTab3,#visualTab4").removeClass("active");
+            $("#visualTab1").addClass("active");
+        });
+        $("#visualTab2").click(function () {
+            $("#visual1").hide();
+            $("#visual2").show();
+            $("#visual3").hide();
+            $("#visual4").hide();
+
+            $("#visualTab1,#visualTab2,#visualTab3,#visualTab4").removeClass("active");
+            $("#visualTab2").addClass("active");
+        });
+        $("#visualTab3").click(function () {
+            $("#visual1").hide();
+            $("#visual2").hide();
+            $("#visual3").show();
+            $("#visual4").hide();
+
+            $("#visualTab1,#visualTab2,#visualTab3,#visualTab4").removeClass("active");
+            $("#visualTab3").addClass("active");
+        });
+        $("#visualTab4").click(function () {
+            $("#visual1").hide();
+            $("#visual2").hide();
+            $("#visual3").hide();
+            $("#visual4").show();
+
+            $("#visualTab1,#visualTab2,#visualTab3,#visualTab4").removeClass("active");
+            $("#visualTab4").addClass("active");
+        });
+    })
+</script>
+<script src="3DmodelViewer/js/three.js"></script>
+<script src="3DmodelViewer/js/controls/OrbitControls.js"></script>
+<script src="3DmodelViewer/js/Detector.js"></script>
+<script src="3DmodelViewer/js/stats.min.js"></script>
+<script type="text/javascript" src="3DmodelViewer/js/render.js"></script>
+<script src="js/foreVisual.js"></script>
+</html>
