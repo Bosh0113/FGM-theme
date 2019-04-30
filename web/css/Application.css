@@ -1,0 +1,160 @@
+table{
+    margin-left: 20px;
+    margin-right: 80px;
+    border-collapse:separate;
+    border-spacing:10px;
+
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: max-content;
+    word-wrap: break-word;
+
+    border-radius: 1rem;
+    background-color: rgba(227, 251, 232, 0.2);
+    background-clip: border-box;
+}
+
+td{
+    width: 856px;
+}
+
+.SelectModel{
+    width: 500px; margin-right: 100px;
+    position: relative;
+    top: -30px;
+    left:220px;
+    display: block;
+    height: 35px;
+    padding: 1px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #35970a;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+ }
+.appButton{
+    width: 150px;
+    height: 30px;
+    position: relative;
+    font-weight: 600;
+    line-height: 1.5;
+    border-width: 0;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: #6ec4ff;
+    margin: 20px 40px 20px 40px;
+}
+
+.inputtext{
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5;
+    height: calc(2.75rem + 2px);
+    padding: .625rem .75rem;
+    transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
+    color: #000000;
+    border: 1px solid #cad1d7;
+    background-color: #fff;
+    background-clip: padding-box;
+    box-shadow: none;
+    margin-left: 30px;
+    /*float: right;*/
+    /*margin-right: 280px;*/
+
+    width: 200px;
+    border-radius: 6px;
+}
+
+.appLabel {
+    font-weight: bold;
+    font-family: Century Schoolbook;
+    margin-right: 40px;
+}
+
+.appContent {
+    margin-right: 40px;
+}
+
+.paramLabel {
+    margin-left: 240px;
+    min-width:100px;
+    width: auto;
+    text-align: center;
+    margin-top: 5px;
+    display:inline-block;
+}
+
+.dataUpload {
+    position: relative;
+    display: inline-block;
+    background: white;
+    border: 1px solid #cad1d7;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #575757;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    width: 200px;
+    height: 35px;
+
+    float: right;
+    margin-right: 280px;
+ }
+.dataUpload input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 280px;
+    height: 35px;
+ }
+.dataUpload:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.btnsub{
+    display: none;
+}
+.radio_data{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.customize{
+    margin-top: 10px;
+    display: none;
+}
+.fileTypeLabel{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 5px;
+    color: gray;
+    font-size: smaller;
+}
+
+.title {
+    width: 100%;
+    font-size: 0;
+    height: 10%;
+}
+.title .content img {
+    width: 35%;
+}
+
+#IntegrationApp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

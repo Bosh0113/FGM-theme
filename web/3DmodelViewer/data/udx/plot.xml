@@ -1,0 +1,22 @@
+<UdxDeclaration name="UdxDeclaration" description="">
+    <UdxNode>
+        <UdxNode name="DataList" type="DTKT_ANY" description="many list of data,including id,age,x,y,z,DBH,TreeHeight,UnderBranchHeight and CrownWight">
+            <UdxNode name="idList" type="DTKT_REAL | DTKT_LIST" description="ID list"/>
+			<UdxNode name="aList" type="DTKT_REAL | DTKT_LIST" description="Age list"/>
+			<UdxNode name="xList" type="DTKT_REAL | DTKT_LIST" description="X list"/>
+			<UdxNode name="yList" type="DTKT_REAL | DTKT_LIST" description="Y list"/>
+			<UdxNode name="zList" type="DTKT_REAL | DTKT_LIST" description="Z list"/>
+			<UdxNode name="dList" type="DTKT_REAL | DTKT_LIST" description="DBH list"/>
+			<UdxNode name="hList" type="DTKT_REAL | DTKT_LIST" description="TreeHeight list"/>
+			<UdxNode name="hbList" type="DTKT_REAL | DTKT_LIST" description="UnderBranchHeight list"/>
+			<UdxNode name="cList" type="DTKT_REAL | DTKT_LIST" description="CrownWight list"/>
+        </UdxNode>
+    </UdxNode>
+    <SemanticAttachment>
+        <Concepts/>
+        <SpatialRefs/>
+        <Units/>
+        <DataTemplates/>
+    </SemanticAttachment>
+</UdxDeclaration>
+

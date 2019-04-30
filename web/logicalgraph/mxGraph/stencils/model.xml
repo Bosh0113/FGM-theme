@@ -1,0 +1,156 @@
+<shapes name="mxGraph.flowchart">
+    <shape name="DBH" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="Height" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="CrownWidth" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="CrownHeight" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="UnderBranchHeight" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="Mortality" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="Volume" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="Biomass" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="Felling" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="StandtoTree" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+    <shape name="OtherModel" w="100" h="60" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.5" y="0" perimeter="0" name="N"/>
+            <constraint x="0.5" y="1" perimeter="0" name="S"/>
+            <constraint x="0" y="0.5" perimeter="0" name="W"/>
+            <constraint x="1" y="0.5" perimeter="0" name="E"/>
+        </connections>
+        <background>
+            <roundrect x="0" y="0" w="100" h="60" arcsize="6"/>
+        </background>
+        <foreground>
+            <fillstroke/>
+        </foreground>
+    </shape>
+</shapes>
